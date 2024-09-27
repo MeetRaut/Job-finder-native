@@ -45,13 +45,16 @@ const Popularjobs = () => {
             data={data}
             renderItem={({ item }) => (
               <PopularJobCard 
-                item = {item}
+                item={item}
+                selectedJob={selectedJob}
+                handleCardPress={handleCardPress} // Pass handleCardPress here
               />
             )}
             keyExtractor={item => item?.job_id}
             contentContainerStyle={{ columnGap: SIZES.medium }}
             horizontal
           />
+
         )}
       </View>
     </View>
